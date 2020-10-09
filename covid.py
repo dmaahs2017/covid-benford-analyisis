@@ -39,7 +39,8 @@ def graph(freq_table, col):
     plt.title(col)
     plt.xlabel("digits")
     plt.ylabel("freq")
-    plt.savefig(f"{col}_bar.png")
+    plt.savefig(f"plots/{col}_bar.png")
+    plt.clf()
 
 if __name__ == "__main__":
     data = pd.read_csv("all-states-history.csv")
