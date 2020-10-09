@@ -25,4 +25,5 @@ def analyse(data, column):
     freq = freq.drop(0)
     freq["freq"] = freq["count"] / freq["count"].sum()
     freq["log_freq"] = process_column(freq.freq, logRecip)
-    return freq
+    freq["digit"] = freq.index
+    return (column, freq)
