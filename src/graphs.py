@@ -17,7 +17,7 @@ def display_freq(freq_tables, filter=""):
 
 def graph_freq(freq_tables, title="Frequency of Digit Plots", show=False, export=True, export_path=".", export_to="digit"):
     fig, axs = plt.subplots(2, int(len(freq_tables) / 2))
-    fig.suptitle("Frequency of Digit Plots")
+    fig.suptitle(title)
 
     for ((table_name, table), ax) in zip(freq_tables, utils.flatten(axs)):
         ax.bar(table.digit, table.freq)
