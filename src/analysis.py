@@ -6,9 +6,6 @@ import graphs
 def process_column(col, fn):
     return [fn(el) for el in col]
 
-def logRecip(number):
-    return 0-math.log(1 / ( number + 1 ))
-
 def leading_digit(number):
     try:
         while number >= 10 or number <= -10:
@@ -30,6 +27,5 @@ def analyse(my_data, column):
     except:
         pass
     freq["freq"] = freq["count"] / freq["count"].sum()
-    freq["log_freq"] = process_column(freq.freq, logRecip)
     freq["digit"] = freq.index
     return (column, freq)

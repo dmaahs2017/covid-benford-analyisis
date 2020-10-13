@@ -10,6 +10,7 @@ numpy = "*"
 matplotlib = "*"
 pandas = "*"
 fire = "*"
+openpyxl = "*"
 
 [requires]
 python_version = "3.8"
